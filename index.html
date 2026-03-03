@@ -47,15 +47,12 @@
             <ul class="space-y-1 mb-6">
                 <li>
                     <a href="https://chaichana-dev-io.github.io/charoenkrung-condo3-parking-admin/" class="flex items-center px-6 py-3 text-green-400 hover:text-white hover:bg-gray-800 transition">
-                        <div class="flex items-center">
-                            <i class='bx bxs-car text-xl mr-3'></i> ระบบที่จอดรถ  </div>
+                        <i class='bx bxs-car text-xl mr-3'></i> ระบบที่จอดรถ
                     </a>
                 </li>
                 <li>
                     <a href="#" class="flex items-center px-6 py-3 text-gray-400 hover:text-white hover:bg-gray-800 transition">
-                        <div class="flex items-center">
-                            <i class='bx bxs-id-card text-xl mr-3'></i> รปภ. / แลกบัตร
-                        </div>
+                        <i class='bx bxs-id-card text-xl mr-3'></i> รปภ. / แลกบัตร
                     </a>
                 </li>
                 <li>
@@ -68,15 +65,12 @@
                 </li>
                 <li>
                     <a href="#" class="flex items-center px-6 py-3 text-gray-400 hover:text-white hover:bg-gray-800 transition">
-                        <div class="flex items-center">
-                            <i class='bx bx-wallet text-xl mr-3'></i> การเงิน / บัญชี
-                        </div>
+                        <i class='bx bx-wallet text-xl mr-3'></i> การเงิน / บัญชี
                     </a>
                 </li>
             </ul>
+        </nav>
 
-           
-        
         <div class="p-4 border-t border-gray-800">
             <button class="flex items-center text-gray-400 hover:text-red-400 transition w-full px-2">
                 <i class='bx bx-log-out text-xl mr-3'></i> ออกจากระบบ
@@ -91,60 +85,68 @@
                 <button class="md:hidden text-gray-500 hover:text-gray-700 focus:outline-none">
                     <i class='bx bx-menu text-3xl'></i>
                 </button>
-                <h2 class="text-xl font-bold text-gray-800 ml-4 md:ml-0">จัดการข่าวสารและประกาศ</h2>
+                <h2 class="text-xl font-bold text-gray-800 ml-4 md:ml-0 uppercase tracking-tight">จัดการข่าวสาร</h2>
             </div>
             
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-3">
+                <a href="https://chaichana-dev-io.github.io/charoenkrung-condo3-index/" 
+                   class="flex items-center gap-1.5 text-sm font-medium text-blue-600 hover:text-blue-800 transition bg-blue-50 px-3 py-1.5 rounded-lg border border-blue-100 shadow-sm mr-2">
+                    <i class='bx bx-home-alt text-lg'></i>
+                    <span class="hidden sm:inline">หน้าหลักเว็บ</span>
+                </a>
+
                 <button class="text-gray-400 hover:text-blue-600 transition">
                     <i class='bx bxs-bell text-xl'></i>
                 </button>
-                <div class="flex items-center gap-2 border-l pl-4">
+                
+                <div class="flex items-center gap-2 border-l pl-4 border-gray-200">
                     <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold">S</div>
-                    <div class="hidden sm:block text-right">
-                        <div class="text-sm font-bold text-gray-700 leading-none">ผู้จัดการคอนโด (Admin)</div>
-                        <span class="text-xs text-green-500">สิทธิ์เข้าถึง: สูงสุด</span>
+                    <div class="hidden sm:block text-right leading-tight">
+                        <div class="text-sm font-bold text-gray-700">ผู้จัดการคอนโด</div>
+                        <span class="text-[10px] text-green-500 font-semibold">ONLINE</span>
                     </div>
                 </div>
             </div>
         </header>
 
-        <div class="flex-1 overflow-y-auto p-6 bg-gray-100">
+        <div class="flex-1 overflow-y-auto p-6 bg-gray-50">
             
             <div class="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">
                 <div class="relative w-full sm:w-64">
                     <i class='bx bx-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400'></i>
-                    <input type="text" placeholder="ค้นหาประกาศ..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="text" placeholder="ค้นหาประกาศ..." class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition shadow-sm bg-white">
                 </div>
-                <button onclick="toggleModal()" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg shadow-sm transition flex items-center justify-center gap-2">
+                <button onclick="toggleModal()" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-5 rounded-xl shadow-md transition flex items-center justify-center gap-2">
                     <i class='bx bx-plus-circle text-lg'></i> สร้างประกาศใหม่
                 </button>
             </div>
 
-            <div class="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-200">
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-200">
                 <div class="overflow-x-auto">
                     <table class="w-full text-left border-collapse">
                         <thead>
-                            <tr class="bg-gray-50 text-gray-500 text-sm border-b border-gray-200">
-                                <th class="px-6 py-4 font-medium">รูปภาพ</th>
-                                <th class="px-6 py-4 font-medium">หัวข้อประกาศ</th>
-                                <th class="px-6 py-4 font-medium">วันที่เผยแพร่</th>
-                                <th class="px-6 py-4 font-medium text-right">จัดการ</th>
+                            <tr class="bg-gray-50 text-gray-500 text-xs uppercase tracking-wider border-b border-gray-200">
+                                <th class="px-6 py-4 font-semibold">รูปภาพ</th>
+                                <th class="px-6 py-4 font-semibold">หัวข้อประกาศ</th>
+                                <th class="px-6 py-4 font-semibold">วันที่</th>
+                                <th class="px-6 py-4 font-semibold text-right">จัดการ</th>
                             </tr>
                         </thead>
-                        <tbody class="text-sm">
-                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
-                                <td class="px-6 py-3">
-                                    <div class="w-16 h-10 bg-gray-200 flex items-center justify-center rounded text-gray-400">
-                                        <i class='bx bx-image text-xl'></i>
+                        <tbody class="text-sm divide-y divide-gray-100">
+                            <tr class="hover:bg-gray-50 transition">
+                                <td class="px-6 py-4">
+                                    <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center text-gray-400 border border-gray-100">
+                                        <i class='bx bx-image-alt text-2xl'></i>
                                     </div>
                                 </td>
-                                <td class="px-6 py-3">
-                                    <p class="font-bold text-gray-800 text-base">ประกาศตัดไฟจำลอง</p>
-                                    <p class="text-gray-500 text-xs mt-1">แจ้งเพื่อทราบ</p>
+                                <td class="px-6 py-4">
+                                    <p class="font-bold text-gray-800">ประกาศตัดไฟจำลอง</p>
+                                    <p class="text-xs text-gray-400">ระบบไฟฟ้า</p>
                                 </td>
-                                <td class="px-6 py-3 text-gray-600">2 มี.ค. 2569</td>
-                                <td class="px-6 py-3 text-right">
-                                    <button class="text-blue-500 hover:text-blue-700 mx-1"><i class='bx bx-edit text-lg'></i></button>
+                                <td class="px-6 py-4 text-gray-600">02/03/2026</td>
+                                <td class="px-6 py-4 text-right">
+                                    <button class="text-blue-500 p-2 hover:bg-blue-50 rounded-lg transition"><i class='bx bx-edit-alt text-xl'></i></button>
+                                    <button class="text-red-400 p-2 hover:bg-red-50 rounded-lg transition ml-1"><i class='bx bx-trash text-xl'></i></button>
                                 </td>
                             </tr>
                         </tbody>
@@ -155,11 +157,11 @@
         </div>
     </main>
 
-    <div id="addNewsModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center backdrop-blur-sm">
-        <div class="bg-white p-6 rounded-xl max-w-sm text-center">
-            <h3 class="text-lg font-bold mb-4">ฟอร์มสร้างประกาศ</h3>
-            <p class="text-gray-500 text-sm mb-4">ส่วนนี้จะเป็นฟอร์มอัพโหลดรูปเข้า Google Drive ในอนาคต</p>
-            <button onclick="toggleModal()" class="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300">ปิดหน้าต่าง</button>
+    <div id="addNewsModal" class="fixed inset-0 bg-black/40 z-50 hidden flex items-center justify-center backdrop-blur-sm">
+        <div class="bg-white p-6 rounded-2xl max-w-sm w-full shadow-2xl text-center">
+            <h3 class="text-xl font-bold mb-2">สร้างประกาศใหม่</h3>
+            <p class="text-gray-500 text-sm mb-6">ฟอร์มอัปโหลดข้อมูลจะถูกพัฒนาในส่วนถัดไป</p>
+            <button onclick="toggleModal()" class="w-full px-4 py-2.5 bg-gray-100 text-gray-700 rounded-xl hover:bg-gray-200 font-bold transition uppercase tracking-wider text-xs">ปิดหน้าต่าง</button>
         </div>
     </div>
 
